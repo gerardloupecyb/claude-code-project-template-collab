@@ -99,12 +99,15 @@ git commit -m "Initial project setup"
 git checkout -b phase-1-alice    # alice's branch
 ```
 
-Then use the PAUL workflow:
+Then use the full workflow (PAUL + Compound Engineering):
 ```
-/paul:plan    → plan the phase
-/pre-flight   → review the plan (4 agents in parallel)
-/paul:apply   → execute
-/paul:unify   → close and capitalize
+/workflows:brainstorm  → explore requirements before planning (Compound)
+/paul:plan             → plan the phase (PAUL)
+/pre-flight            → review the plan with 4 agents in parallel (Compound)
+/paul:apply            → execute the plan (PAUL)
+/workflows:review      → multi-agent code review (Compound)
+/paul:unify            → close the loop, capitalize learnings (PAUL)
+/workflows:compound    → document the solution in docs/solutions/ (Compound flywheel)
 ```
 
 ---
@@ -148,7 +151,9 @@ Dev A (phase 3)                    Dev B (phase 4)
 /paul:plan 03                      /paul:plan 04
 /pre-flight                        /pre-flight
 /paul:apply                        /paul:apply
+/workflows:review                  /workflows:review
 /paul:unify                        /paul:unify
+/workflows:compound                /workflows:compound
 → merge via PR                     → merge via PR
 ```
 
@@ -161,9 +166,12 @@ Shared plan, tasks split between devs. Feature branches per dev
 Dev A (tasks 1-3)                  Dev B (tasks 4-6)
 ─────────────                      ─────────────
 /paul:plan (shared)                Reads same plan
+/pre-flight                        (shared plan, one pre-flight)
 /paul:apply (tasks 1-3)           /paul:apply (tasks 4-6)
+/paul:unify                        /paul:unify
 → merge branches                   → merge branches
-/workflows:review (together)
+/workflows:review (on the merge)
+/workflows:compound
 ```
 
 ### Mode 3 — Sequential handoff
@@ -175,11 +183,15 @@ Dev B reads the handoff file and continues. **Never handoff without unify first.
 Dev A                              Dev B
 ─────                              ─────
 /paul:apply
+/workflows:review
 /paul:unify (MANDATORY)
+/workflows:compound
 /paul:handoff
 → handoffs/{date}.md               Reads handoff + MEMORY-shared
-                                   Continues work
-                                   /paul:unify when done
+                                   /paul:apply (continues)
+                                   /workflows:review
+                                   /paul:unify
+                                   /workflows:compound
 ```
 
 ---

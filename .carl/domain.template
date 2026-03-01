@@ -1,0 +1,9 @@
+# CARL Domain — {{DOMAIN_NAME}}
+# Keywords that trigger this domain (comma-separated)
+KEYWORDS={{KEYWORDS}}
+
+# Rules (numbered per domain)
+{{DOMAIN_NAME}}_RULE_1=CONTEXT: {{DESCRIPTION}}
+{{DOMAIN_NAME}}_RULE_2=PATTERN: {{PATTERN_DESCRIPTION}}
+{{DOMAIN_NAME}}_RULE_3=CONSTRAINT: {{CONSTRAINT_DESCRIPTION}}
+{{DOMAIN_NAME}}_RULE_4=COLLABORATION: Before modifying shared files (MEMORY-shared.md, ROADMAP.md, docs/solutions/), check handoffs/ and other MEMORY-{dev}.md files for potential conflicts. Never overwrite another dev's work without explicit sync.

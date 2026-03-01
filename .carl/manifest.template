@@ -1,0 +1,6 @@
+# CARL Manifest — {{PROJECT_NAME}}
+# Loaded at session start. One domain per line.
+# Format: domain_name [always_on]
+# Keywords in domain files trigger automatic loading.
+
+{{DOMAIN_NAME}}

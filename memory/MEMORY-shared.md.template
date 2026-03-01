@@ -1,0 +1,33 @@
+# MEMORY-shared — {{PROJECT_NAME}}
+
+> Decisions d'equipe et contexte partage. Lu par TOUS les devs en debut de session.
+> Ne modifier qu'apres validation d'equipe (ou en le signalant dans le commit).
+
+## Architecture retenue
+
+| Decision | Raison | Date | Par |
+|----------|--------|------|-----|
+
+## Conventions d'equipe
+
+<!-- Patterns, nommage, structure de fichiers, conventions de code -->
+
+## Stack technique
+
+| Composant | Choix | Notes |
+|-----------|-------|-------|
+
+## Ownership phases
+
+| Phase | Owner | Statut | Notes |
+|-------|-------|--------|-------|
+
+## Blocages partages
+
+<!-- Blocages qui affectent plusieurs devs ou l'equipe entiere -->
+
+## Journal des decisions
+
+<!-- Historique chronologique des decisions importantes -->
+### {{DATE}}
+-

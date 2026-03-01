@@ -1,0 +1,29 @@
+# MEMORY — {{DEV_NAME}} @ {{PROJECT_NAME}}
+
+> Etat session personnel. Non lu par les autres devs sauf handoff.
+> Mis a jour a chaque fin de session.
+
+## Ma position
+
+- Phase : —
+- Task : —
+- Derniere session : {{DATE}}
+- Prochaine etape : —
+
+## Ce que j'ai fait
+
+### {{DATE}}
+-
+
+## Mes decisions locales
+
+<!-- Decisions pas encore promues dans MEMORY-shared.
+     Promouvoir via context-manager-team quand stabilisees. -->
+
+## Blocages perso
+
+<!-- Blocages specifiques a mon travail, pas a l'equipe -->
+
+## Notes de session
+
+<!-- Notes temporaires, questions ouvertes, idees -->

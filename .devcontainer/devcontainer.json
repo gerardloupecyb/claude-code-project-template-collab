@@ -1,0 +1,33 @@
+{
+  "name": "Claude Code Collab",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "anthropic.claude-code",
+        "mhutchie.git-graph",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.claude,target=/home/developer/.claude,type=bind,consistency=cached",
+    "source=${localEnv:HOME}/.mcp.json,target=/home/developer/.mcp.json,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "echo '✓ Claude Code Collab environment ready. Run: claude --version'",
+  "postStartCommand": "sudo /usr/local/bin/init-firewall.sh 2>/dev/null || true",
+  "remoteUser": "developer",
+  "containerEnv": {
+    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
+  }
+}

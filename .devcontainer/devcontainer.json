@@ -24,10 +24,7 @@
     "source=${localEnv:HOME}/.claude,target=/home/developer/.claude,type=bind,consistency=cached",
     "source=${localEnv:HOME}/.mcp.json,target=/home/developer/.mcp.json,type=bind,consistency=cached"
   ],
-  "postCreateCommand": "echo '✓ Claude Code Collab environment ready. Run: claude --version'",
+  "postCreateCommand": "echo '✓ Claude Code Collab environment ready. Run: claude --version' && echo 'If not logged in, run: claude login'",
   "postStartCommand": "sudo /usr/local/bin/init-firewall.sh 2>/dev/null || true",
-  "remoteUser": "developer",
-  "containerEnv": {
-    "ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
-  }
+  "remoteUser": "developer"
 }
